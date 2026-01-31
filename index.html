@@ -1,0 +1,99 @@
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 to-gray-900 text-gray-100">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-24 px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-5xl md:text-6xl font-bold mb-6"
+        >
+          Armaan Chaudhary
+        </motion.h1>
+        <p className="text-xl md:text-2xl text-gray-400 mb-8">
+          Data Science Engineering Student
+        </p>
+        <div className="flex gap-4">
+          <Button asChild>
+            <a href="https://github.com/armaan385" target="_blank">
+              <Github className="mr-2" /> GitHub
+            </a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="mailto:your@email.com">
+              <Mail className="mr-2" /> Contact
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-6">About Me</h2>
+        <p className="text-gray-300 leading-relaxed">
+          I am an engineering student focused on Data Science and Analytics. I enjoy
+          building data-driven systems, working with machine learning models, and
+          turning raw data into meaningful insights.
+        </p>
+      </section>
+
+      {/* Skills */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-6">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {["Python", "Machine Learning", "Data Analysis", "SQL", "Pandas", "React"].map(
+            (skill) => (
+              <Card key={skill}>
+                <CardContent className="p-4 text-center">{skill}</CardContent>
+              </Card>
+            )
+          )}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">Data Analysis Project</h3>
+              <p className="text-gray-400 mb-4">
+                Exploratory data analysis and visualization using Python and Pandas.
+              </p>
+              <Button variant="link" asChild>
+                <a href="https://github.com/armaan385" target="_blank">
+                  View on GitHub
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2">Machine Learning Model</h3>
+              <p className="text-gray-400 mb-4">
+                Built and evaluated ML models for prediction and classification.
+              </p>
+              <Button variant="link" asChild>
+                <a href="https://github.com/armaan385" target="_blank">
+                  View on GitHub
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-10 text-gray-500">
+        © {new Date().getFullYear()} Armaan Chaudhary · Built with React
+      </footer>
+    </div>
+  );
+}
