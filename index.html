@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armaan Chaudhary | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e5e7eb;
+    line-height:1.6;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+    from { opacity:0; transform: translateY(40px); }
+    to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+/* ===== Hero Section ===== */
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    animation: fadeUp 1.2s ease;
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    margin-bottom:20px;
+    box-shadow:0 15px 30px rgba(56,189,248,0.35);
+    animation: fadeIn 1.5s ease;
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover{
+    transform: scale(1.05);
+}
+
+.hero h1{
+    font-size:2.6rem;
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:1.1rem;
+    color:#cbd5f5;
+}
+
+/* ===== Sections ===== */
+section{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+    animation: fadeUp 1s ease;
+}
+
+h2{
+    font-size:1.8rem;
+    margin-bottom:20px;
+    border-left:5px solid #38bdf8;
+    padding-left:12px;
+}
+
+/* ===== Cards ===== */
+.card{
+    background:#020617;
+    padding:22px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(56,189,248,0.15);
+    transition: all 0.4s ease;
+    animation: fadeIn 1.2s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:0 20px 40px rgba(56,189,248,0.25);
+}
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    margin-bottom:8px;
+}
+
+/* ===== Contact ===== */
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    color:#94a3b8;
+    animation: fadeIn 2s ease;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:600px){
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <img src="profile.jpg" alt="Armaan Chaudhary" class="profile-img">
+    <h1>Armaan Chaudhary</h1>
+    <p>Engineering Student | Computer Science Enthusiast</p>
+</header>
+
+<!-- ABOUT -->
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am currently pursuing B.Tech in Computer Science Engineering from
+            Gautam Buddha University. I am passionate about programming and enjoy
+            building real-world applications.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>HTML</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section>
+    <h2>Project</h2>
+    <div class="card">
+        <h3>Advance Attendance Management System</h3>
+        <p>
+            A digital system designed to automate attendance management,
+            reduce manual effort, and improve accuracy using technology.
+        </p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+    <h2>Education</h2>
+    <div class="card">
+        <p><strong>10+2:</strong> Completed</p>
+        <p><strong>B.Tech:</strong> Pursuing</p>
+        <p><strong>Branch:</strong> Computer Science Engineering</p>
+        <p><strong>University:</strong> Gautam Buddha University</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact</h2>
+    <div class="card contact">
+        <p>Email: <a href="mailto:armaanchaudhary294@gmail.com">
+            armaanchaudhary294@gmail.com</a></p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Armaan Chaudhary | Portfolio Website
+</footer>
+
+</body>
+</html>
+
